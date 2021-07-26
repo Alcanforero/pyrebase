@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; margin-top: 7%;">
+        <div class="card text-center" style="width: 22rem;" id="logged">
+            <div class="card-header h3"> Inicio de sesión </div>
+            <div class="card-body">
+                
+                <form action="/main.html" method="POST">
+                    <p><input type="text" name="email" class="form-control mr-sm-2" placeholder="Correo electrónico" />
+                    </p>
+                    <p><input type="password" name="pass" class="form-control mr-sm-2" placeholder="Contraseña" /></p>
+                    {% if error %}
+                    <div>
+                        <p style="display: flex; justify-content: center; margin-top: 5%;" class=error>
+                            <strong>Error:</strong> {{ error }}</p>
+                    </div>
+                    {% endif %}
+                    <p><input type="submit" value="Iniciar Sesión" class="btn btn-outline-success my-2 my-sm-0"></p>
+                </form>
+
+                <p><a href="passChange.html">¿Has olvidado la contraseña?</a></p>
+
+                <div class="card-footer">
+                    <button onclick="document.location='regist.html'"
+                        class="btn btn-outline-success my-2 my-sm-0">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </script>
+</body>
+
+</html>
